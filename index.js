@@ -66,7 +66,7 @@ function createPassword(charCount, characters) {
     }
     newPassword.innerHTML =
         "your password is: " +
-        `<span class="new-password">${password.join("")}</span>`;
+        `<br><span class="new-password">${password.join("")}</span>`;
     console.log(password.length);
 }
 
