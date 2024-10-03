@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Password Generator</title>
+    </head>
+    <body>
+        <div class="main">
+            <div class="title">
+                <h1>Password Generator</h1>
+            </div>
+            <div class="content">
+                <div class="instructions">
+                    <p>select the parameters of your password.</p>
+                </div>
+                <div class="mid">
+                    <div class="parameters">
+                        <div class="option">
+                            <label>
+                                <input
+                                    class="param upperCase"
+                                    type="checkbox"
+                                />
+                                Upper-case
+                            </label>
+                        </div>
+                        <div class="option">
+                            <label>
+                                <input
+                                    class="param lowerCase"
+                                    type="checkbox"
+                                />
+                                Lower-case
+                            </label>
+                        </div>
+                        <div class="option">
+                            <label>
+                                <input class="param digits" type="checkbox" />
+                                Digits
+                            </label>
+                        </div>
+                        <div class="option">
+                            <label>
+                                <input class="param minus" type="checkbox" />
+                                Minus
+                            </label>
+                        </div>
+                        <div class="option">
+                            <label>
+                                <input
+                                    class="param underline"
+                                    type="checkbox"
+                                />
+                                Underline
+                            </label>
+                        </div>
+                        <div class="option">
+                            <label>
+                                <input class="param spaces" type="checkbox" />
+                                Spaces
+                            </label>
+                        </div>
+                        <div class="option">
+                            <label>
+                                <input class="param special" type="checkbox" />
+                                Special
+                            </label>
+                        </div>
+                        <div class="option">
+                            <label>
+                                <input class="param brackets" type="checkbox" />
+                                Brackets
+                            </label>
+                        </div>
+                        <div class="option">
+                            <label>
+                                <input class="param latin-1" type="checkbox" />
+                                Latin-1 Supplement
+                            </label>
+                        </div>
+                        <div class="selector">
+                            <label>
+                                <input
+                                    class="length-selector"
+                                    type="number"
+                                    value="9"
+                                    min="9"
+                                    max="30"
+                                />
+                                Password length
+                            </label>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn">Generate Password</button>
+                    </div>
+                </div>
+                <div class="display">
+                    <p>your password:</p>
+                    <h2 class="new-password"></h2>
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
+<label></label>
