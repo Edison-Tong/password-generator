@@ -32,7 +32,16 @@ function getParameters() {
             used.push(charTypes[i]);
         }
     }
-    createPassword(length, used);
+    try {
+        used[0].length;
+        createPassword(length, used);
+    } catch (error) {
+        console.log(
+            "An error was successfully caught using a try-catch block:",
+            error
+        );
+        newPassword.innerHTML = "Please select at least one parameter.";
+    }
 }
 
 function createPassword(charCount, characters) {
@@ -55,7 +64,9 @@ function createPassword(charCount, characters) {
         let j = Math.floor(Math.random() * (ii + 1));
         [password[ii], password[j]] = [password[j], password[ii]];
     }
-    newPassword.innerHTML = password.join("");
+    newPassword.innerHTML =
+        "your password is: " +
+        `<span class="new-password">${password.join("")}</span>`;
     console.log(password.length);
 }
 
