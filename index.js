@@ -32,6 +32,7 @@ function getParameters() {
             used.push(charTypes[i]);
         }
     }
+
     try {
         used[0].length;
         createPassword(length, used);
@@ -54,7 +55,7 @@ function createPassword(charCount, characters) {
 
     characters = characters.join("");
 
-    while (password.length < charCount - 1) {
+    while (password.length < charCount) {
         password += characters[Math.floor(Math.random() * characters.length)];
     }
 
@@ -67,7 +68,6 @@ function createPassword(charCount, characters) {
     newPassword.innerHTML =
         "your password is: " +
         `<br><span class="new-password">${password.join("")}</span>`;
-    console.log(password.length);
 }
 
 generate.addEventListener("click", getParameters);
